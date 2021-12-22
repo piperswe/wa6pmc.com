@@ -48,3 +48,5 @@ export const indexByID = delay((): { [id: string]: Contact } =>
 export const sortedByTimestamp = delay((): Contact[] =>
 	contacts.sort((a, b) => a.timestamp.getTime() - b.timestamp.getTime())
 );
+
+export const reverseSortedByTimestamp = delay((): Contact[] => [...sortedByTimestamp()].reverse());
