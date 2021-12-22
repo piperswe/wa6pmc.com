@@ -1,6 +1,8 @@
 <script type="ts" context="module">
 	import { Contact, indexByID as contacts } from '$lib/contacts';
 
+	export const prerender = true;
+
 	/** @type {import('@sveltejs/kit').Load} */
 	export async function load({ page }) {
 		const contact = contacts()[page.params.id];

@@ -1,5 +1,7 @@
-<script type="ts">
+<script type="ts" context="module">
 	import { sortedByTimestamp as contacts, contactToString } from '$lib/contacts';
+
+	export const prerender = true;
 </script>
 
 <h1>WA6PMC</h1>
