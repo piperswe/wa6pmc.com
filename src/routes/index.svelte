@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script type="ts">
+	import { sortedByTimestamp as contacts, contactToString } from '$lib/contacts';
+</script>
+
+<h1>WA6PMC</h1>
+<h2>Contacts</h2>
+<ul>
+	{#each contacts() as contact}
+		<li><a href="/contacts/{contact.id}">{contactToString(contact)}</a></li>
+	{/each}
+</ul>
